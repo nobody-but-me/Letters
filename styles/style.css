@@ -25,4 +25,27 @@ html, body {
     transition: all 0.5s;
 }
 
+.shake { 
+    animation: shake 1s ease-out 0s 1 normal none;
+}
+
+@keyframes shake {
+    0%, 100% { 
+	transform: translate(-50%, -50%);
+    } 
+    10%, 30%, 50%, 70% { 
+	transform: translate(-55%, -50%);
+    } 
+    20%, 40%, 60% { 
+	transform: translate(-45%, -50%);
+    } 
+    80% { 
+	transform: translate(-42%, -50%);
+    } 
+    90% { 
+	transform: translate(-58%, -50%);
+    } 
+}
+
+
 
