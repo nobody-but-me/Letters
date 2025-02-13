@@ -1,6 +1,6 @@
 
 html, body {
-    background-color: black;
+    background-color: rgb(7, 7, 7);
     color:            white;
     font-family:      "Courier New", "Courier", "New Times Roman";
     
@@ -11,7 +11,30 @@ html, body {
     overflow-x: hidden;
 }
 
+#letter_container {
+    position:  absolute;
+    left:      50%;
+    top:       120%;
+    transform: scale(1) translate(-50%, -50%);
+    
+    display:         flex;
+    justify-content: center;
+    flex-direction:  column;
+    
+    transition: all 0.5s;
+}
+
 #letter {
+    max-height: 300px;
+    max-width:  300px;
+    height: 215px;
+    width:  300px;
+    
+    transform: translate(0%, 0%);
+    
+    transition: all 0.5s;
+}
+.letter_overlay {
     max-height: 300px;
     max-width:  300px;
     height: 215px;
@@ -20,9 +43,25 @@ html, body {
     position:  absolute;
     left:      50%;
     top:       50%;
-    transform: scale(1) translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     
     transition: all 0.5s;
+}
+
+#letter_button {
+    position:  absolute;
+    left:      50%;
+    top:       50%;
+    transform: scale(1) translate(-50%, -50%);
+    
+    border:     none;
+    background: none;
+    outline:    none;
+    
+    height: 215px;
+    width:  300px;
+    
+    z-index: 10;
 }
 
 .shake { 
@@ -34,17 +73,17 @@ html, body {
 	transform: translate(-50%, -50%);
     } 
     10%, 30%, 50%, 70% { 
-	transform: translate(-55%, -50%);
+	transform: translate(-53%, -50%);
     } 
     20%, 40%, 60% { 
-	transform: translate(-45%, -50%);
+	transform: translate(-43%, -50%);
     } 
     80% { 
-	transform: translate(-42%, -50%);
+	transform: translate(-44%, -50%);
     } 
     90% { 
-	transform: translate(-58%, -50%);
-    } 
+	transform: translate(-54%, -50%);
+    }
 }
 
 
